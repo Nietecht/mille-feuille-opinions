@@ -1,0 +1,24 @@
+{
+  "name": "mille-feuille-opinions",
+  "version": "1.0.0",
+  "description": "Good opinions have many layers, resulting in sweet bites of knowledge.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  },
+  "scripts": {
+    "eleventy": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nietecht/mille-feuille-opinions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nietecht/mille-feuille-opinions/issues"
+  },
+  "homepage": "https://github.com/Nietecht/mille-feuille-opinions#readme"
+}
