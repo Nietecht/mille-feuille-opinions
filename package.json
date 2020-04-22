@@ -6,7 +6,9 @@
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "markdown-it-anchor": "^5.2.7",
+    "markdown-it-attrs": "^3.0.2"
   },
   "scripts": {
     "eleventy": "eleventy",
