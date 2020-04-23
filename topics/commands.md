@@ -13,7 +13,7 @@ We can identify two major use cases:
 1. A way to abstract the concrete action taken when "activating" an input element (like a button)
 2. A representation of instructions which are generated in one place and passed on to (an)other component(s) to complete the instruction.
 
-In the first case we can see that first our code compiles a command, this is passed of to an intermediate who decides when to execute it, if at all. Only then we need to concern ourselves with the question: How is this command "executed". The focus here is more on decoupling declaring the command vs executing the command.
+In the first case we can see that first our code compiles a command, this is passed of to an intermediate who decides when to execute it, if at all. Only then we need to concern ourselves with the question: How is this command "executed". The focus here is more on decoupling declaring the command vs triggering the command's execution. Usually the command as described here is directly executable and as such is the task to be done in stead of a message representing the task to be done.
 
 In the second case construction and execution of the command are assumed to be the same, and the focus is more on the "execution" part of this command. The focus here is more on decoupling requesting the commands execution vs actually executing the command.
 
@@ -23,6 +23,7 @@ Commands in software have a couple of different roles.
 We can use them to represent input to a process, represent the commissioning of a task
 
 * Explain why this is a problem; motivate a best practice
+
 * Sum up the (theoretical) requirements of a solution
 
 ## 2. Technological parts of the solution {#techparts}
@@ -34,7 +35,7 @@ We can use them to represent input to a process, represent the commissioning of 
 
 * Describe how to implement this/these solution(s) in a codebase
 * What to watch out for
-* Call out specific impact on other code or the overal architecture
+* Call out specific impact on other code or the overall architecture
 
 ## 4. Semi-copy pastable packaged example code {#prettySample}
 
