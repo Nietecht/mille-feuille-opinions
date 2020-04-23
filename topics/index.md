@@ -3,4 +3,6 @@ layout: layout.njk
 ---
 # Topics
 
-## anchor demo {id=customAnchor}
+## anchor demo {#customAnchor}
+
+* [Commands](commands)
