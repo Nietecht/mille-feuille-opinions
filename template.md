@@ -1,3 +1,6 @@
+---
+layout: layout.njk
+---
 # Topic Name
 
 ## 1. Description

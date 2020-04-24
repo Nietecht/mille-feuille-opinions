@@ -1,5 +1,5 @@
 ---
-title: Mille-fueille opinions
+title: mille-fueille opinions
 ---
 <!doctype html>
 <html lang="en">
@@ -7,9 +7,27 @@ title: Mille-fueille opinions
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="/css/themes/prism-dracula.css">
+    <!-- Mustard UI: https://kylelogue.github.io/mustard-ui/index.html -->
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
   </head>
   <body>
-    {{ content | safe }}
+    <nav>
+      <section class="nav-container">
+        <div class="nav-logo">
+          <a href="/">{{title}}</a>
+        </div>
+      </section>
+    </nav>
+    <main>
+      <section class="container">
+        <article>
+          {{ content | safe }}
+        </article>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>
