@@ -19,7 +19,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.png");
   
   return {
-    passthroughFileCopy: true
     passthroughFileCopy: true,
     
     dir: {
