@@ -14,8 +14,19 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy('css')
+  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy("img/*.png");
+  eleventyConfig.addPassthroughCopy("favicon.png");
   
   return {
     passthroughFileCopy: true
+    passthroughFileCopy: true,
+    
+    dir: {
+      input: ".",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
+    }
   }
 };
