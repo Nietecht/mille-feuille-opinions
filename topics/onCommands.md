@@ -1,13 +1,24 @@
 ---
 layout: layout.njk
+topic: On Commands
 ---
 # On Commands {#top}
 
 ## 1. Description {#theory}
 
-> **NOTE**:  Add reference to Domain
+### In context {#inContext}
 
 > **NOTE**:  Add reference to CQRS/CQS ?
+
+When we talk about Commands we have to talk in which light they are mostly used and then CQS (or CQRS) springs most to the fore.
+
+> **NOTE**:  Add reference to Domain
+
+Commands are most often use to interact with the core part of the application and decouple it from the way in which it is talked to and hosted.
+However since the this is the core of the application, we would do well to keep it at the center of our design concerns.
+It should be the beating heart which steers the design direction.
+Whose influence permeates the whole of the application.
+We as technical people would do well to remember this and not let our technological preferences permeate the core.
 
 <!-- > **NOTE**:  Add reference to Domain -->
 <!-- * [x] Describe the problem -->
@@ -28,9 +39,12 @@ When this communication happens as a normal call, there is no impact on the comm
 
 ### As flow {#asFlow}
 
-A command could also be perceived as representing a flow, or the doorway to a flow. 
+A command could also be perceived as representing a flow, or the doorway to a flow.
+Certainly representing the road between requester and executor in this way is a popular opinion, a lot of pseudo-magical dispatchers exist to help with implementing this idea.
+However often this is reduced to a central component doing al the routing based on some predefined rules and you follow those or it doesn't work, while the pipeline idea is lost.
+A flow defined declaratively as a pipeline can still reuse base or default steps, but at the same time allows specific flows to be augmented with the relevant context and/or operations.
 
-> **_NOTE_:** Add the stuff about a pipeline here?
+Having these kinds of flows in an j
 
 <!-- * [x] Explain why this is a problem; motivate a best practice -->
 
@@ -58,7 +72,7 @@ We want
 
 Whilst it is arguably _easier_ to capture both these roles in one element, decoupling these two roles from each other enables you to _simplify_ your architecture and lessen the overall impact of using commands.
 
-## 2. Technological parts of the solution {#techparts}
+## 2. Technological parts of the solution {#techParts}
 
 * Give an overview of technological solutions to this problem.
 * Qualify/Quantify how they match to/interpret the requirements
@@ -69,7 +83,7 @@ Whilst it is arguably _easier_ to capture both these roles in one element, decou
 * What to watch out for
 * Call out specific impact on other code or the overall architecture
 
-## 4. Semi-copy pastable packaged example code {#prettySample}
+## 4. Semi 'copy paste'-able packaged example code {#prettySample}
 
 * Provide a working sample
 * explain the choices you made

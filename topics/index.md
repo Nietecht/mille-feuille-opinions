@@ -6,4 +6,5 @@ layout: layout.njk
 ## anchor demo {#customAnchor}
 
 * [Commands](commands)
-* [On Commands](commandsv2)
+* [On Commands](onCommands)
+* [On The Domain](onTheDomain)
