@@ -13,9 +13,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLib);
 
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPassthroughCopy('css')
   eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy("img/*.png");
+  eleventyConfig.addPassthroughCopy("img/*.(png|jpeg)");
   eleventyConfig.addPassthroughCopy("favicon.png");
   
   return {
