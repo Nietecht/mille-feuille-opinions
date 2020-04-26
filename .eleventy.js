@@ -1,6 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAbbr = require("markdown-it-abbr");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require('markdown-it-footnote');
 
@@ -10,6 +11,7 @@ module.exports = function(eleventyConfig) {
   };
 
   const markdownLib = markdownIt(options).use(markdownItAttrs, markdownItAnchor)
+      .use(markdownItAbbr)
       .use(markdownItFootnote)
       ;
   
