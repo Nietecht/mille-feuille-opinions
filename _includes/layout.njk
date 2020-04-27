@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -11,7 +13,10 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!-- /favicon -->
+
     <title>{{ metadata.title }}</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="/css/themes/prism-dracula.css">
@@ -23,15 +28,9 @@
       <section class="nav-container">
         <div class="nav-logo">
           <a href="/" class="nav-logo"><img src="/img/mille-feuille_yellow-on-white3b.png" height=60 alt="{{metadata.title}} logo" />{{metadata.title}}</a>
-          <!--{% if topic %}
-          : {{topic|safe}}
-          {% endif %}<!---->
         </div>
       </section>
     </nav>
-    <!--<header style="height: 5em">
-    <h1>{{topic}}</h1>
-    </header><!---->
     <main>
       <section class="container">
         <article>
