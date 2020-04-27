@@ -18,9 +18,22 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLib);
 
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPassthroughCopy('css')
+  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy("img/*.(png|svg)");
+  eleventyConfig.addPassthroughCopy("*.png");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("browserconfig.xml");
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
+  eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
   
   return {
-    passthroughFileCopy: true
+    passthroughFileCopy: true,
+    
+    dir: {
+      input: ".",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
+    }
   }
 };

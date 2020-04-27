@@ -1,23 +1,32 @@
----
-title: mille-fueille opinions
----
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+    <!-- /favicon -->
+
+    <title>{{ metadata.title }}</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="/css/themes/prism-dracula.css">
     <!-- Mustard UI: https://kylelogue.github.io/mustard-ui/index.html -->
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@1.0.4/dist/css/mustard-ui.min.css">
   </head>
   <body>
     <nav>
       <section class="nav-container">
         <div class="nav-logo">
-          <a href="/">{{title}}</a>
+          <a href="/" class="nav-logo"><img src="/img/mille-feuille-yellow-on-alpha.svg" height=60 alt="{{metadata.title}} logo" />{{metadata.title}}</a>
         </div>
       </section>
     </nav>
@@ -28,6 +37,7 @@ title: mille-fueille opinions
         </article>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
   </body>
 </html>
