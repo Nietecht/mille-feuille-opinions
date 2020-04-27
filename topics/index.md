@@ -2,17 +2,17 @@
 layout: layout.njk
 ---
 # Topics
-## anchor demo [^1] {id=customAnchor}
 
 * [Commands](commands)
 * [On Commands](onCommands)
 * [On The Domain](onTheDomain)
-
-words DA yolo
-
-BAM BAM
+## anchor demo [^1] {id=customAnchor}
 
 *[DA]: DA Abbreviated
 *[BAM]: BAM Abbreviated Modestly
+
+words DA yolo[^1]
+
+BAM BAM
 
 [^1]: Here is the footnote
