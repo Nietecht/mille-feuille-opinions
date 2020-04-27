@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy("img/*.(png|jpeg)");
+  eleventyConfig.addPassthroughCopy("img/*.(png|svg)");
   eleventyConfig.addPassthroughCopy("*.png");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("browserconfig.xml");
