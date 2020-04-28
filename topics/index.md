@@ -6,6 +6,8 @@ layout: layout.njk
 * [Commands](commands)
 * [On Commands](onCommands)
 * [On The Domain](onTheDomain)
+* [On Events](onEvents)
+
 ## anchor demo [^1] {id=customAnchor}
 
 *[DA]: DA Abbreviated

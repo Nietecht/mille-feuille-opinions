@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+topic: On Events
+---
+# On Events {#top}
+
+## 1. Description {#theory}
+
+* Describe the problem
+* Explain why this is a problem; motivate a best practice
+* Sum up the (theoretical) requirements of a solution
+
+## 2. Technological parts of the solution {#techparts}
+
+* Give an overview of technological solutions to this problem.
+* Qualify/Quantify how they match to/interpret the requirements
+
+## 3. Basic integration in your codebase {#basicIntegration}
+
+* Describe how to implement this/these solution(s) in a codebase
+* What to watch out for
+* Call out specific impact on other code or the overall architecture
+
+## 4. Semi-copy pastable packaged example code {#prettySample}
+
+* Provide a working sample
+* explain the choices you made
+* Call out settings to tweak

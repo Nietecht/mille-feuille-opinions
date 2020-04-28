@@ -10,7 +10,10 @@ topic: On Commands
 
 > **NOTE**:  Add reference to CQRS/CQS ?
 
-When we talk about Commands we have to talk in which light they are mostly used and then CQS (or CQRS) springs most to the fore.
+When talking about Commands we should consider in which light they are most often used.
+The most important trigger for most people is the desire to implement CQS or even CQRS. [^cqrsNotEasy]
+
+> **NOTE**: Add remark that CQS commands, don't have to be a thing in you application. It is simply about keeping the modifying operations separate from the reading(querying) operations.
 
 > **NOTE**:  Add reference to Domain
 
@@ -18,9 +21,8 @@ Commands are most often use to interact with the core part of the application an
 However since the this is the core of the application, we would do well to keep it at the center of our design concerns.
 It should be the beating heart which steers the design direction.
 Whose influence permeates the whole of the application.
-We as technical people would do well to remember this and not let our technological preferences permeate the core.
+We as technical people would do well to remember this and not let our technological preferences permeate the core. [^domain]
 
-<!-- > **NOTE**:  Add reference to Domain -->
 <!-- * [x] Describe the problem -->
 
 ### As signature {#asSignature}
@@ -59,6 +61,8 @@ Many a time this will not pose a problem, but it happens often enough that becau
 
 > **_NOTE_:** insert can-o-worms image
 
+![gip](https://www.planetnatural.com/wp-content/uploads/2013/03/can-o-worms.jpg "image")
+
 <!-- * [ ] Sum up the (theoretical) requirements of a solution -->
 
 ### Requirements of the solution
@@ -71,6 +75,8 @@ We want
 4. to maximize the possible utility of an implemented pattern
 
 Whilst it is arguably _easier_ to capture both these roles in one element, decoupling these two roles from each other enables you to _simplify_ your architecture and lessen the overall impact of using commands.
+
+![boem](https://media.giphy.com/media/XUFPGrX5Zis6Y/giphy.gif "kaboem")
 
 ## 2. Technological parts of the solution {#techParts}
 
@@ -88,3 +94,12 @@ Whilst it is arguably _easier_ to capture both these roles in one element, decou
 * Provide a working sample
 * explain the choices you made
 * Call out settings to tweak
+
+*[CQS]: Command-Query Separation
+*[CQRS]: Command Query Responsibility Segregation
+
+[^cqrsNotEasy]: Correctly implementing CQRS is not for the faint of heart. See the last paragraph of [Martin Fowler - CQRS - When to use it](https://martinfowler.com/bliki/CQRS.html#WhenToUseIt)
+
+    Yowla
+
+[^domain]: See [On the domain](/topics/onTheDomain)

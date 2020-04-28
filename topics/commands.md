@@ -23,7 +23,6 @@ Commands in software have a couple of different roles.
 We can use them to represent input to a process, represent the commissioning of a task
 
 * Explain why this is a problem; motivate a best practice
-
 * Sum up the (theoretical) requirements of a solution
 
 ## 2. Technological parts of the solution {#techparts}
