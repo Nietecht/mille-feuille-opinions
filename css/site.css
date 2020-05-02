@@ -1,0 +1,30 @@
+img[src*='#left'] {
+  float: left;
+}
+
+img[src*='#right'] {
+  float: right;
+}
+
+img[src*='#center'] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure {
+  margin: auto;
+  text-align: center;
+  text-indent: 0;
+  margin: 1em;
+  padding: 1em;
+}
+
+figure img {
+  margin-bottom: 1em;
+}
+
+.code-annotation {
+  background-color: lightyellow;
+  padding: 0.5em;
+}
