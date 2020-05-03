@@ -5,6 +5,11 @@
       // Load default terms (see terms.json in the repository)
       "defaultTerms": true
     },
+    "spelling": {
+      "language": "en",
+      "skipPatterns": ["/codebase/i", "/deserialization/i", "/(CQRS|CQS)/i", "/\\{[#\\.=\\w]+\\}/"],
+      "suggestCorrections": false
+    },
     "ginger": {
       "skipPatterns": ["/codebase/i", "/deserialization/i"]
     }

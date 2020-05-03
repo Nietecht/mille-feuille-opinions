@@ -8,12 +8,14 @@
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "dictionary-en": "^3.0.0",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "^5.2.7",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-footnote": "^3.0.2",
     "textlint": "^11.6.3",
     "textlint-rule-ginger": "^2.2.1",
+    "textlint-rule-spelling": "file:../textlint-rule-spelling",
     "textlint-rule-terminology": "^2.1.4"
   },
   "scripts": {
