@@ -5,10 +5,10 @@ layout: layout.njk
 
 ## Index
 
-* [readme](/readme)
-* [template](/template)
-* [topics](/topics)
-* [topics#customAnchor](/topics#customAnchor)
+* [Read me](/readme)
+* [Template](/template)
+* [Topics](/topics)
+* [Topics at the custom anchor](/topics#customAnchor)
 
 ``` csharp
 System.Console.WriteLine("Hello world!");

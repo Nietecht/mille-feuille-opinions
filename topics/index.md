@@ -8,7 +8,7 @@ layout: layout.njk
 *[DA]: DA Abbreviated
 *[BAM]: BAM Abbreviated Modestly
 
-words DA yolo[^1]
+Words DA solo[^1]
 
 BAM BAM
 

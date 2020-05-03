@@ -1,0 +1,12 @@
+{
+  "filters": {},
+  "rules": {
+    "terminology": {
+      // Load default terms (see terms.json in the repository)
+      "defaultTerms": true
+    },
+    "ginger": {
+      "skipPatterns": ["/codebase/i", "/deserialization/i"]
+    }
+  }
+}
