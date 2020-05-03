@@ -4,14 +4,14 @@ topic: On the Domain
 ---
 # On the Domain {#top}
 
-The _"Domain"_ is the core of the application, it describes _what_ our application is about.
-The _"Domain"_ tries to ignore _how_ all these things are to be realised and effectuated in the outside world.
-The correctness of _what_ is paramount, if it can declare it's intentions as to _why_ it might do so.
+The *"Domain"* is the core of the application, it describes *what* our application is about.
+The *"Domain"* tries to ignore *how* all these things are to be realized and effectuated in the outside world.
+The correctness of *what* is paramount, if it can declare its intentions as to *why* it might do so.
 
 The _when_[^when] is looked down upon as a practical detail and capturing it from an epochal perspective quite often suffices.
 
-However since the this is the core of the application, we would do well to keep it at the center of our design concerns.
-It should be the beating heart which steers the design direction.
+Since this is the core of the application, we would do well to keep it at the center of our design concerns.
+It should be the beating heart, which steers the design direction.
 Whose influence permeates the whole of the application.
 We as technical people would do well to remember this and not let our technological preferences permeate the core.
 
@@ -32,10 +32,10 @@ We as technical people would do well to remember this and not let our technologi
 * What to watch out for
 * Call out specific impact on other code or the overall architecture
 
-## 4. Semi-copy pastable packaged example code {#prettySample}
+## 4. Semi "copy-paste"-able packaged example code {#prettySample}
 
 * Provide a working sample
-* explain the choices you made
+* Explain the choices you made
 * Call out settings to tweak
 
 [^when]: Footnote

@@ -21,8 +21,9 @@ topic: On Events
 * What to watch out for
 * Call out specific impact on other code or the overall architecture
 
-## 4. Semi-copy pastable packaged example code {#prettySample}
+## 4. Semi "copy-paste"-able packaged example code {#prettySample}
 
 * Provide a working sample
-* explain the choices you made
+
+* Explain the choices you made
 * Call out settings to tweak
