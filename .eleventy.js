@@ -3,7 +3,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAbbr = require("markdown-it-abbr");
 const markdownItAttrs = require("markdown-it-attrs");
-const markdownItFootnote = require('markdown-it-footnote');
+const markdownItFootnote = require("markdown-it-footnote");
 
 module.exports = function(eleventyConfig) {
   const options = {
@@ -19,8 +19,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy("img/*.(png|svg)");
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy({"_favicons":"/"})
   
   return {
