@@ -18,7 +18,7 @@ layout: layout.njk
 
 * Describe how to implement this/these solution(s) in a codebase
 * What to watch out for
-* Call out specific impact on other code or the overal architecture
+* Call out specific impact on other code or the overall architecture
 
 ## 4. Semi "copy paste"-able packaged example code {#prettySample}
 

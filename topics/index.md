@@ -6,10 +6,10 @@ layout: layout.njk
 ## anchor demo [^1] {id=customAnchor}
 
 *[DA]: DA Abbreviated
-*[BAM]: BAM Abbreviated Modestly
+*[YA]: YA ain't
 
 Words DA solo[^1]
 
-BAM BAM
+YA YA
 
 [^1]: Here is the footnote
