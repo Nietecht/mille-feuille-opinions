@@ -4,7 +4,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAbbr = require("markdown-it-abbr");
 const markdownItAttrs = require("markdown-it-attrs");
-const markdownItFootnote = require('markdown-it-footnote');
+const markdownItFootnote = require("markdown-it-footnote");
 
 const {TextLintEngine} = require('textlint');
 const engine = new TextLintEngine();
@@ -35,13 +35,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy("img/*.(png|svg)");
-  eleventyConfig.addPassthroughCopy("*.png");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("browserconfig.xml");
-  eleventyConfig.addPassthroughCopy("site.webmanifest");
-  eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
+
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy({"_favicons":"/"})
   
   return {
     passthroughFileCopy: true,
