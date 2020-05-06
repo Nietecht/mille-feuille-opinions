@@ -1,0 +1,17 @@
+{
+  "filters": {},
+  "rules": {
+    "terminology": {
+      // Load default terms (see terms.json in the repository)
+      "defaultTerms": true
+    },
+    "spelling": {
+      "language": "en",
+      "skipPatterns": ["/mille-feuille/i", "/codebase/i", "/deserialization/i", "/(CQRS|CQS)/i", "/\\{[#\\.=\\w]+\\}/"],
+      "suggestCorrections": false
+    },
+    "ginger": {
+      "skipPatterns": ["/codebase/i", "/deserialization/i"]
+    }
+  }
+}
