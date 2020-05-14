@@ -1,3 +1,4 @@
+const fs = require('fs');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownIt = require("markdown-it");
@@ -38,7 +39,25 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy({"_favicons":"/"})
+  eleventyConfig.addPassthroughCopy({"_favicons":"/"});
+  
+  // For local development only
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, bs) {
+
+        bs.addMiddleware("*", (req, res) => {
+          // Add 404 http status code in request header.
+          // res.writeHead(404, { "Content-Type": "text/html" });
+          res.writeHead(404);
+          const content_404 = fs.readFileSync('_site/404.html');
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          res.end();
+        });
+      }
+    }
+  });
   
   return {
     passthroughFileCopy: true,
