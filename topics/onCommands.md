@@ -1,17 +1,20 @@
 ---
 layout: layout.njk
-topic: On Commands
+title: On Commands
+date: 2020-05-05 15:00:00
+authors:
+  - name: Joris Goovaerts
+  - name: Ruben Goris
 ---
-# On Commands {#top}
-
-## 1. Description {#theory}
-
-### In context {#inContext}
-
-> **NOTE**:  Add reference to CQRS/CQS ?
+## In context {#inContext}
 
 When talking about Commands we should consider in which light they are most often used.
 The most important trigger for most people is the desire to implement CQS or even CQRS. [^cqrsNotEasy]
+Whether or not this is the right choice for your specific situation is another topic all together. But let's imagine that you want to do this.
+
+### Command-Query Separation {#cqs}
+
+> **NOTE**:  Add reference to CQRS/CQS ?
 
 > **NOTE**: Add remark that CQS commands don't have to be a thing in you application.
 It is about keeping the modifying operations separate from the reading(querying) operations.
@@ -26,7 +29,7 @@ We as technical people would do well to remember this and not let our technologi
 
 <!-- * [x] Describe the problem -->
 
-### As signature {#asSignature}
+## As signature {#asSignature}
 
 Commands are in general used to represent an instruction packaged as a message.
 This representation is then passed off to the "system" for execution.
@@ -38,7 +41,7 @@ This can be considered as nothing but another representation of a method call `i
 
 <!-- So now we have shown that you can understand command definitions as method signatures we can look at another look at commands. -->
 
-### As communication {#asCommunication}
+## As communication {#asCommunication}
 
 You could also say that commands communicate instructions between the sender and receiver of the [previous section](#asSignature) and so decouple the implementation of the sender from the implementation of the receiver through an abstraction layer, not unlike an interface.
 
@@ -46,22 +49,22 @@ When this communication happens as a normal call, there is no impact on the comm
 If we want to decouple these two parties further and outsource the delivery to an external system like a queue, a bus or other messaging system, we have to assume things like serialization and deserialization.
 Whatever the technology in use, you cannot assume that the way you structured your data in memory is transferable across in the wire in the same format.
 
-### As flow {#asFlow}
+## As flow {#asFlow}
 
 A command could also be perceived as representing a flow, or the doorway to a flow.
 Certainly representing the road between requester and executor in this way is a popular opinion, a lot of pseudo-magical dispatchers exist to help with implementing this idea.
 Often this is reduced to a central component doing all the routing based on some predefined rules and you follow those or it doesn't work, while the pipeline idea is lost.
-A flow defined declaratively as a pipeline can still reuse base or default steps, but at the same time allows specific flows to be augmented with the relevant context and/or operations.
+A declarative flow as a pipeline can still reuse base or default steps, but at the same time allows specific flows to be augmented with the relevant context and/or operations.
 
 Having these kinds of flows in an j
 
 <!-- * [x] Explain why this is a problem; motivate a best practice -->
 
-### Cross section
+## Cross section
 
 Looking at the [signature](#asSignature) and [communication](#asCommunication) sections we can discern some conflicting goals:
 
-1. Provide an abstract description of both intention and its allowed and/or required parameterization
+1. Provide an abstract description of both intention and its allowed and/or required parameters
 2. Provide an easily transferable message
 
 Many a time this will not pose a problem, but it happens often enough that because of constraints in how messages are put on the wire a certain expressiveness has to be removed to still allow unambiguous serialization and/or deserialization.
