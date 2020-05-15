@@ -16,8 +16,8 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- /favicon -->
+    <title>{% if title %}{{title}} | {% endif %}{{ metadata.title }}</title>
 
-    <title>{{ metadata.title }}</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -34,11 +34,28 @@
       </section>
     </nav>
     <main>
-      <section class="container">
-        <article>
+      {% if title %}
+      <article class="container">
+        {# <header> #}
+          <h1>{{title}}</h1>
+        {# </header> #}
+        <section>
           {{ content | safe }}
-        </article>
+        </section>
+        <footer>
+          <p>Content date: <time datetime="{{page.date.toISOString()}}">{{page.date.toUTCString()}}</time></p>
+          {% if authors %}
+          <p>Authors: {% for author in authors %}{{ author.name }}; {% endfor %}</p>
+          {% else %}
+          <p>Authors: anonymous</p>
+          {% endif %}
+        </footer>
+      </article>
+      {% else %}
+      <section class="container">
+        {{ content | safe }}
       </section>
+      {% endif %}
     </main>
     <footer>
     </footer>
