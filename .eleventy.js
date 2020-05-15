@@ -4,7 +4,9 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAbbr = require("markdown-it-abbr");
 const markdownItAttrs = require("markdown-it-attrs");
-const markdownItFootnote = require("markdown-it-footnote");
+const markdownItFootnote = require('markdown-it-footnote');
+const markdownlint = require("markdownlint");
+const chalk = require("chalk");
 
 const {TextLintEngine} = require('textlint');
 const engine = new TextLintEngine();
@@ -35,6 +37,20 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  const config = markdownlint.readConfigSync(".markdownlint.json");
+  const markdownItPlugins = [[markdownItAttrs], [markdownItAbbr], [markdownItFootnote]];
+
+  eleventyConfig.addLinter("markdownlint", (content, inputPath, outputPath) => {
+    markdownlint({files:[inputPath], config: config, markdownItPlugins: markdownItPlugins}, function callback(err, result) {
+      if (!err) {
+        const resultString = result.toString();
+        if (resultString){
+          console.warn(chalk.yellow(resultString));
+        }
+      }
+    });
+  })
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("img");
