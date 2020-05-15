@@ -6,6 +6,8 @@ layout: layout.njk
 ## C\#
 
 ``` csharp
+using System;
+
 System.Console.WriteLine("Hello world!");
 ```
 
@@ -27,6 +29,33 @@ const Q = (i) => {
 };
 const PT = (i, s) => {
     switch (s) {
+        case A:
+            return [
+                s(i),
+                PT(s)
+            ]
+    }
+};
+```
+
+## TypeScript
+
+``` typescript
+const A = 1;
+const B = 2;
+const C = 3;
+const P = (i: Number) => {
+    switch (i) {
+        case A:
+    }
+};
+const Q = (i: Number) => {
+    switch (i) {
+        case A:
+    }
+};
+const PT = (i: Number, s: any) => {
+    switch (i) {
         case A:
             return [
                 s(i),
