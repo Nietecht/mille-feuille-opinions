@@ -9,7 +9,7 @@
     },
     "spelling": {
       "language": "en",
-      "skipPatterns": ["/mille-feuille/i", "/codebase/i", "/deserialization/i", "/(CQRS|CQS)/i", "/\\{[#\\.=\\w]+\\}/"],
+      "skipPatterns": ["/mille-feuille/i", "/codebase/i", "/deserialization/i", "/(CQRS|CQS)/i", "/\\{[#\\.=\\w]+\\}/", "/(in|out)degree/i", "/\\b[0-9]+\\b/],
       "suggestCorrections": false
     },
     "ginger": {
