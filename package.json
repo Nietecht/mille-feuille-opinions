@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "dictionary-en": "^3.0.0",
     "markdown-it-abbr": "^1.0.4",
